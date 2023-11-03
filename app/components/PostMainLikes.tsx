@@ -108,7 +108,7 @@ export default function PostMainLikes({ post }: PostMainLikesCompTypes) {
 
     return (
         <>
-            <div id={`PostMainLikes-${post?.id}`} className="relative">
+            <div id={`PostMainLikes-${post?.id}`} className="relative md:mr-[75px]">
                 <div className="absolute bottom-24 right-2 md:bottom-0 md:right-auto pl-2">
                     <div className="pb-4 text-center">
                         <button 

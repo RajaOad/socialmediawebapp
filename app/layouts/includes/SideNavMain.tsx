@@ -7,7 +7,11 @@ import { useUser } from "@/app/context/user"
 import ClientOnly from "@/app/components/ClientOnly"
 import { useGeneralStore } from "@/app/stores/general"
 
-export default function SideNavMain() {
+interface SideNavMainProps {
+    isSideNavOpen: boolean;
+  }
+
+export default function SideNavMain({ isSideNavOpen }: SideNavMainProps) {
 
     let { setRandomUsers, randomUsers} = useGeneralStore()
 
@@ -20,8 +24,8 @@ export default function SideNavMain() {
             <div 
                 id="SideNavMain" 
                 className={`
-                    fixed z-20 bg-white pt-[70px] h-full lg:border-r-0 border-r w-[75px] overflow-auto
-                    ${pathname === '/' ? 'lg:w-[310px]' : 'lg:w-[220px]'}
+                    fixed md:left-auto z-20 bg-white pt-[70px] h-full lg:border-r-0 border-r w-[75px] overflow-auto transition-all duration-300 md:transition-none
+                    ${pathname === '/' ? 'lg:w-[310px]' : 'lg:w-[220px]'} ${!isSideNavOpen? '-left-28': 'left-0'}
                 `}
             >
                 

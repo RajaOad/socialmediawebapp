@@ -3,7 +3,7 @@ import { debounce } from "debounce";
 import { useRouter, usePathname } from "next/navigation"
 import { BiSearch, BiUser } from "react-icons/bi"
 import { AiOutlinePlus } from "react-icons/ai"
-import { BsThreeDotsVertical } from "react-icons/bs"
+// import { BsThreeDotsVertical } from "react-icons/bs"
 import { FiLogOut } from "react-icons/fi"
 import { useEffect, useState } from "react"
 import { useUser } from "@/app/context/user"
@@ -11,8 +11,14 @@ import { useGeneralStore } from "@/app/stores/general"
 import useCreateBucketUrl from "@/app/hooks/useCreateBucketUrl"
 import { RandomUsers } from "@/app/types"
 import useSearchProfilesByName from "@/app/hooks/useSearchProfilesByName";
+import { FaBars } from "react-icons/fa";
 
-export default function TopNav() {    
+interface TopNavProps {
+    setIsSideNavOpen?: (value: boolean) => void;
+    isSideNavOpen?: boolean;
+  }
+
+export default function TopNav({ setIsSideNavOpen, isSideNavOpen }: TopNavProps) {    
     const userContext = useUser()
     const router = useRouter()
     const pathname = usePathname()
@@ -46,6 +52,12 @@ export default function TopNav() {
         <>
             <div id="TopNav" className="fixed bg-white z-30 flex items-center w-full border-b h-[60px]">
                 <div className={`flex items-center justify-between gap-6 w-full px-4 mx-auto ${pathname === '/' ? 'max-w-[1150px]' : ''}`}>
+
+                   {setIsSideNavOpen ? <div className="md:hidden">
+                        <button onClick={() => setIsSideNavOpen(isSideNavOpen = !isSideNavOpen)}>
+                    <FaBars size="22" />
+                    </button>
+                    </div>: null}
 
                     <Link href="/">
                         <img className="min-w-[115px] w-[115px]" src="/images/logo-small.png"/>

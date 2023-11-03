@@ -9,10 +9,11 @@ import PostMain from "./components/PostMain"
 export default function Home() {
   let { allPosts, setAllPosts } = usePostStore();
   useEffect(() => { setAllPosts()}, [])
+  
   return (
     <>
       <MainLayout>
-        <div className="mt-[80px] w-[calc(100%-75px)] max-w-[690px] ml-auto">
+        <div className="mt-[80px] w-full md:w-[calc(100%-75px)] max-w-[690px] ml-auto">
           <ClientOnly>
             {allPosts.map((post, index) => (
               <PostMain post={post} key={index} />

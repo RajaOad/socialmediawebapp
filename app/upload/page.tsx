@@ -4,7 +4,6 @@ import React, { useEffect, useState } from "react";
 import UploadLayout from "../layouts/UploadLayout";
 import { BiLoaderCircle, BiSolidCloudUpload } from "react-icons/bi"
 import { AiOutlineCheckCircle } from "react-icons/ai";
-import { PiKnifeLight } from 'react-icons/pi'
 import { useRouter } from "next/navigation";
 import { useUser } from "@/app/context/user"
 import { UploadError } from "../types";
@@ -79,7 +78,7 @@ export default function Upload() {
 
     return (
         <>
-            <UploadLayout>
+            <UploadLayout> 
                 <div className="w-full mt-[80px] mb-[40px] bg-white shadow-lg rounded-md py-6 md:px-10 px-4">
                     <div>
                         <h1 className="text-[23px] font-semibold">Upload video</h1>
@@ -169,7 +168,7 @@ export default function Upload() {
                                 <img 
                                     className="absolute right-4 bottom-6 z-20" 
                                     width="90" 
-                                    src="/images/tiktok-logo-white.png"
+                                    src="/images/logo.png"
                                 />
                                 <video 
                                     autoPlay
@@ -193,22 +192,6 @@ export default function Upload() {
 
 
                         <div className="mt-4 mb-6">
-                            <div className="flex bg-[#F8F8F8] py-4 px-6">
-                                <div>
-                                    <PiKnifeLight className="mr-4" size="20"/>
-                                </div>
-                                <div>
-                                    <div className="text-semibold text-[15px] mb-1.5">Divide videos and edit</div>
-                                    <div className="text-semibold text-[13px] text-gray-400">
-                                        You can quickly divide videos into multiple parts, remove redundant parts and turn landscape videos into portrait videos
-                                    </div>
-                                </div>
-                                <div className="flex justify-end max-w-[130px] w-full h-full text-center my-auto">
-                                    <button className="px-8 py-1.5 text-white text-[15px] bg-[#00bfff] rounded-sm">
-                                        Edit
-                                    </button>
-                                </div>
-                            </div>
 
                             <div className="mt-5">
                                 <div className="flex items-center justify-between">
