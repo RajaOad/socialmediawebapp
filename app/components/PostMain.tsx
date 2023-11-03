@@ -27,14 +27,14 @@ export default function PostMain({ post }: PostMainCompTypes) {
         <>
             <div id={`PostMain-${post.id}`} className="flex border-b py-6">
 
-                <div className="cursor-pointer">
+                <div className="pl-3 w-full px-4">
+                
+                    <div className="flex items-center pb-0.5">
+                    <div className="cursor-pointer">
                     <img className="rounded-full max-h-[60px]" width="60" src={useCreateBucketUrl(post?.profile?.image)} />
                 </div>
-
-                <div className="pl-3 w-full px-4">
-                    <div className="flex items-center justify-between pb-0.5">
                         <Link href={`/profile/${post.profile.user_id}`}>
-                            <span className="font-bold hover:underline cursor-pointer">
+                            <span className="font-bold hover:underline cursor-pointer ml-2">
                                 {post.profile.name}
                             </span>
                         </Link>
