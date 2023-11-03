@@ -27,7 +27,7 @@ export default function PostMain({ post }: PostMainCompTypes) {
         <>
             <div id={`PostMain-${post.id}`} className="flex border-b py-6">
 
-                <div className="pl-3 w-full px-4">
+                <div className="md:pl-3 w-full px-4">
                 
                     <div className="flex items-center pb-0.5">
                     <div className="cursor-pointer">

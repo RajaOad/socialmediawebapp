@@ -108,8 +108,8 @@ export default function PostMainLikes({ post }: PostMainLikesCompTypes) {
 
     return (
         <>
-            <div id={`PostMainLikes-${post?.id}`} className="relative md:mr-[45px]">
-                <div className="absolute bottom-0 pl-2">
+            <div id={`PostMainLikes-${post?.id}`} className="relative">
+                <div className="absolute bottom-24 right-2 md:bottom-0 md:right-auto pl-2">
                     <div className="pb-4 text-center">
                         <button 
                             disabled={hasClickedLike}
@@ -123,7 +123,7 @@ export default function PostMainLikes({ post }: PostMainLikesCompTypes) {
                             )}
                             
                         </button>
-                        <span className="text-xs text-gray-800 font-semibold">
+                        <span className="text-xs text-white md:text-gray-800 font-semibold">
                             {likes?.length}
                         </span>
                     </div>
@@ -135,7 +135,7 @@ export default function PostMainLikes({ post }: PostMainLikesCompTypes) {
                         <div className="rounded-full bg-gray-200 p-2 cursor-pointer">
                             <FaCommentDots size="25"/>
                         </div>
-                        <span className="text-xs text-gray-800 font-semibold">{comments?.length}</span>
+                        <span className="text-xs text-white md:text-gray-800 font-semibold">{comments?.length}</span>
                     </button>
 
                     <button className="text-center">
