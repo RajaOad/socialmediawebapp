@@ -77,6 +77,7 @@ export default function SideNavMain({ isSideNavOpen }: SideNavMainProps) {
                         <p className="pt-4 px-2">About Newsroom ClipCraze Shop Contact Careers ByteDance</p>
                         <p className="pt-4 px-2">ClipCraze for Good Advertise Developers Transparency ClipCraze Rewards ClipCraze Browse ClipCraze Embeds</p>
                         <p className="pt-4 px-2">Help Safety Terms Privacy Creator Portal Community Guidelines</p>
+                        <p className="pt-4 px-2">Developed and Designed by <span className="color-[#00bfff]">Raj Kumar Oad</span></p>
                         <p className="pt-4 px-2">© 2023 ClipCraze</p>
                     </div>
 
